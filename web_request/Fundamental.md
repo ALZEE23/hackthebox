@@ -4,20 +4,20 @@
 
 ![alt text](/images/flow.png)
 
-HTTP communication consists of a client and a server, where the client requests the server for a resource. The server processes the requests and returns the requested resource. The default port for HTTP communication is port 80, though this can be changed to any other port, depending on the web server configuration. The same requests are utilized when we use the internet to visit different websites. We enter a Fully Qualified Domain Name (FQDN) as a Uniform Resource Locator (URL) to reach the desired website, like www.hackthebox.com.
+Komunikasi HTTP terdiri dari client dan server, di mana client meminta resource ke server. Server memproses request dan mengembalikan resource yang diminta. Port default untuk komunikasi HTTP adalah port 80, namun bisa diubah ke port lain tergantung konfigurasi web server. Request yang sama juga digunakan saat kita browsing ke berbagai website. Kita memasukkan Fully Qualified Domain Name (FQDN) sebagai Uniform Resource Locator (URL) untuk mencapai website yang diinginkan, misalnya www.hackthebox.com.
 
 ![alt text](/images/url.png)
 
 ## URL Components
 
-| Component    | Example              | Description                                                                                                                                                                      |
-| ------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scheme       | `http://` `https://` | This is used to identify the protocol being accessed by the client, and ends with a colon and a double slash (`://`)                                                             |
-| User Info    | `admin:password@`    | This is an optional component that contains the credentials (separated by a colon `:`) used to authenticate to the host, and is separated from the host with an at sign (`@`)    |
-| Host         | `inlanefreight.com`  | The host signifies the resource location. This can be a hostname or an IP address                                                                                                |
-| Port         | `:80`                | The Port is separated from the Host by a colon (`:`). If no port is specified, http schemes default to port 80 and https default to port 443                                     |
-| Path         | `/dashboard.php`     | This points to the resource being accessed, which can be a file or a folder. If there is no path specified, the server returns the default index (e.g. index.html)               |
-| Query String | `?login=true`        | The query string starts with a question mark (`?`), and consists of a parameter (e.g. login) and a value (e.g. true). Multiple parameters can be separated by an ampersand (`&`) |
-| Fragments    | `#status`            | Fragments are processed by the browsers on the client-side to locate sections within the primary resource (e.g. a header or section on the page)                                 |
+| Komponen     | Contoh               | Deskripsi                                                                                                                                             |
+| ------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Scheme       | `http://` `https://` | Digunakan untuk mengidentifikasi protokol yang diakses client, dan diakhiri dengan titik dua serta double slash (`://`)                               |
+| User Info    | `admin:password@`    | Komponen opsional yang berisi kredensial (dipisah titik dua `:`) untuk autentikasi ke host, dan dipisahkan dari host dengan tanda at (`@`)            |
+| Host         | `inlanefreight.com`  | Host menunjukkan lokasi resource. Bisa berupa hostname atau alamat IP                                                                                 |
+| Port         | `:80`                | Port dipisahkan dari Host dengan titik dua (`:`). Jika tidak ditentukan, scheme http default ke port 80 dan https default ke port 443                 |
+| Path         | `/dashboard.php`     | Menunjuk resource yang diakses, bisa file atau folder. Jika tidak ada path, server mengembalikan index default (mis. index.html)                      |
+| Query String | `?login=true`        | Query string diawali tanda tanya (`?`), terdiri dari parameter (mis. login) dan nilai (mis. true). Banyak parameter dipisahkan dengan ampersand (`&`) |
+| Fragments    | `#status`            | Fragment diproses browser di sisi client untuk menemukan bagian tertentu dalam resource utama (mis. header atau section pada halaman)                 |
 
-> **Note:** Understanding URL components is essential for web security and request handling. Each component plays a crucial role in how browsers and servers communicate.
+> **Catatan:** Memahami komponen URL sangat penting untuk keamanan web dan penanganan request. Setiap komponen berperan penting dalam cara browser dan server berkomunikasi.
